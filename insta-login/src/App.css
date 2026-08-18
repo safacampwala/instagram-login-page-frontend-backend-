@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left-side {
+  width: 48%;
+  min-height: 100vh;
+  border-right: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+  overflow: hidden;
+}
+
+.brand-logo {
+  align-self: flex-start;
+  margin-left: 45px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #d62976;
+}
+
+.left-side h2 {
+  margin-top: 55px;
+  text-align: center;
+  font-size: 31px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.left-side h2 span {
+  background: linear-gradient(
+    90deg,
+    #ff6040,
+    #ff1689,
+    #7c35ff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Photo area */
+
+.photo-container {
+  width: 380px;
+  height: 420px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+/* Right side */
+
+.right-side {
+  width: 52%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 528px;
+  max-width: 90%;
+}
+
+.login-container h1 {
+  font-size: 18px;
+  margin: 0 0 32px;
+  font-weight: 600;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-container input {
+  width: 100%;
+  height: 60px;
+  padding: 0 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-container input:focus {
+  border-color: #777;
+}
+
+.login-button {
+  height: 44px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 24px;
+  background: #8db9ee;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #6fa8e5;
+}
+
+.forgot-button {
+  display: block;
+  margin: 25px auto 65px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.facebook-button {
+  height: 45px;
+  border-radius: 24px;
+  background: #f1f2f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.facebook-button span {
+  color: #1877f2;
+}
+
+.create-button {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #1877f2;
+  border-radius: 24px;
+  background: white;
+  color: #1877f2;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.meta {
+  text-align: center;
+  margin-top: 28px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+
+  .login-container {
+    max-width: 420px;
+  }
+}
+
+/* ========================================
+   CREATE NEW ACCOUNT PAGE
+======================================== */
+
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fff;
+}
+
+.signup-container {
+  width: 400px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* Signup box */
+
+.signup-box {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  padding: 35px 40px 25px;
+  background: #fff;
+}
+
+.instagram-logo {
+  margin: 0 0 18px;
+  font-family: cursive;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.signup-box h2 {
+  margin: 0 auto 20px;
+  color: #737373;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Facebook button */
+
+.signup-box .facebook-button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  background: #0095f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.signup-box .facebook-button:hover {
+  background: #1877f2;
+}
+
+.signup-box .facebook-button span {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* OR */
+
+.or-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.or-container .line {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+}
+
+.or-container span {
+  color: #737373;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Signup form */
+
+.signup-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-box input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  margin-bottom: 7px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  background: #fafafa;
+  color: #111;
+  font-size: 13px;
+  outline: none;
+}
+
+.signup-box input:focus {
+  border-color: #999;
+  background: #fff;
+}
+
+/* Information text */
+
+.signup-info {
+  margin: 12px 5px;
+  color: #737373;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.signup-info span {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Sign up button */
+
+.signup-button {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 7px;
+  background: #0095f6;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background: #1877f2;
+}
+
+/* Already have account */
+
+.already-account {
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.already-account button {
+  margin-left: 5px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Get the app */
+
+.get-app {
+  margin: 20px 0 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.app-buttons button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+/* ========================================
+   SIGNUP RESPONSIVE
+======================================== */
+
+@media (max-width: 500px) {
+  .signup-page {
+    width: 100%;
+  }
+
+  .signup-container {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .signup-box {
+    border-left: none;
+    border-right: none;
+    padding: 30px 30px 25px;
+  }
+
+  .already-account {
+    border-left: none;
+    border-right: none;
+  }
+}
